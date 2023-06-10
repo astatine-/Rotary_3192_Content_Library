@@ -49,14 +49,14 @@
   <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FELQ0E1Y0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FELQ0E1Y0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-6FELQ0E1Y0');
-</script>
+    gtag('config', 'G-6FELQ0E1Y0');
+  </script>
 
 
   <style>
@@ -82,6 +82,14 @@
     .wapopup button {
       padding: 10px 20px;
     }
+
+    .above-nav {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+      height: 5vh;
+
+    }
   </style>
   <script>
     var currentLink;
@@ -105,7 +113,7 @@
       const waurl = "https://wa.me" + "?text=" + message;
       window.open(waurl);
     }
- 
+
   </script>
 
 </head>
@@ -123,13 +131,28 @@
             <input type="tel" id="waphoneNumber" placeholder="Enter WhatsApp number" required>
             <br>
             <div class="modal-footer justify-content-between">
-              <button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0" data-bs-dismiss="modal"> 
+              <button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0"
+                data-bs-dismiss="modal">
                 Send now
               </button>
               <button type="button" class="btn bg-gradient-dark" data-bs-dismiss="modal">Close</button>
             </div>
           </form>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div  class="container">
+    <div class="row above-nav">
+      <div class="col-4">
+        <img class="float-start border-radius-md shadow-lg " height="100%" src="./assets/rid3192.jpeg" alt="image">
+      </div>
+      <div class="col-4">
+        <img class="mx-auto  d-block border-radius-md shadow-lg" height="100%" src="./assets/teambharavase.jpeg" alt="image">
+      </div>
+      <div class="col-4">
+        <img class="float-end border-radius-md shadow-lg" height="100%" src="./assets/Create Hope Horizontal_RGB.png" alt="image">
       </div>
     </div>
   </div>
@@ -141,8 +164,8 @@
         <nav
           class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div class="container-fluid px-0">
-            <a class="navbar-brand font-weight-bolder ms-sm-3"
-              rel="tooltip" title="Designed and Coded by Arun Tanksali" data-placement="bottom" target="_blank">
+            <a class="navbar-brand font-weight-bolder ms-sm-3" rel="tooltip" title="Designed and Coded by Arun Tanksali"
+              data-placement="bottom" target="_blank">
               Rotary District 3192 Content Library
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
