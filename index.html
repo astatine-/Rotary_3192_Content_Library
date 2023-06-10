@@ -71,7 +71,7 @@
   </style>
   <script>
     var currentLink;
-    function openPopup(url) {
+    function launchWA(url) {
       currentLink = url;
       document.getElementById("wapopupForm").style.display = "block";
     }
@@ -80,10 +80,18 @@
       event.preventDefault();
       const phoneNumber = document.getElementById("waphoneNumber").value;
       const message = encodeURI("Download from: " + currentLink + "\nSent via RID 3192 Content Library");
-      const url = "https://wa.me/" + encodeURIComponent(phoneNumber) + "?text=" + message;
+      const url = "https://wa.me" + encodeURIComponent(phoneNumber) + "?text=" + message;
       window.open(url);
       document.getElementById("wapopupForm").style.display = "none";
     }
+
+    function launchWA(url) {
+      event.preventDefault();
+      const message = encodeURI("Download from: " + url + "\nSent via RID 3192 Content Library");
+      const waurl = "https://wa.me" + "?text=" + message;
+      window.open(waurl);
+    }
+ 
   </script>
 
 </head>
@@ -231,7 +239,7 @@
                       Download logos
                     </a>
                     </button><button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0" data-bs-toggle="modal" data-bs-target="#wapopupForm"
-                      onclick="openPopup('https://drive.google.com/drive/folders/1MiAv07WIChawEkemixETCD0PYWVMonWX?usp=sharing')">
+                      onclick="launchWA('https://drive.google.com/drive/folders/1MiAv07WIChawEkemixETCD0PYWVMonWX?usp=sharing')">
                       <i class="material-icons me-2" aria-hidden="true">share</i>WhatsApp
                     </button>
                     <!-- <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p> -->
@@ -261,7 +269,7 @@
                       Download photo
                     </a>
                     </button><button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0"
-                      onclick="openPopup('https://drive.google.com/drive/folders/1Y4aKao4MjMKos7718b0CTohVvrfSOAKM?usp=sharing')">
+                      onclick="launchWA('https://drive.google.com/drive/folders/1Y4aKao4MjMKos7718b0CTohVvrfSOAKM?usp=sharing')">
                       <i class="material-icons me-2" aria-hidden="true">share</i>WhatsApp
                     </button>
                   </div>
@@ -295,7 +303,7 @@
                       Download photo set
                     </a>
                     </button><button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0"
-                      onclick="openPopup('https://drive.google.com/drive/folders/15JZAS1WoiliOjmwOcX6xPhy_K1zbfuIF?usp=sharing')">
+                      onclick="launchWA('https://drive.google.com/drive/folders/15JZAS1WoiliOjmwOcX6xPhy_K1zbfuIF?usp=sharing')">
                       <i class="material-icons me-2" aria-hidden="true">share</i>WhatsApp
                     </button>
                     <!-- <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p> -->
@@ -326,7 +334,7 @@
                       Download photo set
                     </a>
                     </button><button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0"
-                      onclick="openPopup('https://drive.google.com/drive/folders/1aNw0CdT7Q2_T0ErYYUu15H34-bA12jbj?usp=sharing')">
+                      onclick="launchWA('https://drive.google.com/drive/folders/1aNw0CdT7Q2_T0ErYYUu15H34-bA12jbj?usp=sharing')">
                       <i class="material-icons me-2" aria-hidden="true">share</i>WhatsApp
                     </button>
                   </div>
@@ -359,7 +367,7 @@
               Download videos
             </a>
             </button><button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0"
-              onclick="openPopup('https://drive.google.com/drive/folders/1e6ug2R3ux_KJE4LR3a_fNrPWMeuN1fHh?usp=sharing')">
+              onclick="launchWA('https://drive.google.com/drive/folders/1e6ug2R3ux_KJE4LR3a_fNrPWMeuN1fHh?usp=sharing')">
               <i class="material-icons me-2" aria-hidden="true">share</i>WhatsApp
             </button>
 
@@ -377,7 +385,7 @@
               Download templates
             </a>
             </button><button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0"
-              onclick="openPopup('https://drive.google.com/drive/folders/1dVY2Gqc0le3k4DVrY4SqXiSEvUi0fa6m?usp=sharing')">
+              onclick="launchWA('https://drive.google.com/drive/folders/1dVY2Gqc0le3k4DVrY4SqXiSEvUi0fa6m?usp=sharing')">
               <i class="material-icons me-2" aria-hidden="true">share</i>WhatsApp
             </button>
 
@@ -420,7 +428,7 @@
                     Download training presentations
                   </a>
                   </button><button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0"
-                    onclick="openPopup('https://drive.google.com/drive/folders/1ulr51EfSMjF4Xr3UDHKIUbIh1Z3E63vn?usp=sharing')">
+                    onclick="launchWA('https://drive.google.com/drive/folders/1ulr51EfSMjF4Xr3UDHKIUbIh1Z3E63vn?usp=sharing')">
                     <i class="material-icons me-2" aria-hidden="true">share</i>WhatsApp
                   </button>
 
@@ -442,7 +450,7 @@
                     Download DTA - Prerana presentations
                   </a>
                   </button><button type="submit" class="btn bg-gradient-success btn-icon btn-sm w-auto me-1 mb-0"
-                    onclick="openPopup('https://drive.google.com/drive/folders/1sZevT0r4msVTvpfUszSrekiZ9q2GkBtZ?usp=sharing')">
+                    onclick="launchWA('https://drive.google.com/drive/folders/1sZevT0r4msVTvpfUszSrekiZ9q2GkBtZ?usp=sharing')">
                     <i class="material-icons me-2" aria-hidden="true">share</i>WhatsApp
                   </button>
                 </div>
